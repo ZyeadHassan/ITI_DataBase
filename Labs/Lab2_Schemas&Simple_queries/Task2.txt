@@ -1,0 +1,31 @@
+SELECT * FROM Employee
+
+SELECT Fname,Lname,salary,Dno
+FROM Employee
+
+SELECT Project.Pname , Project.Plocation ,Departments.Dname
+FROM Project
+INNER JOIN Departments ON Project.Dnum = Departments.Dnum
+
+SELECT Fname+' '+Lname 'FullName' , (salary*12)*.10 'ANNUAL COMM'
+FROM Employee
+
+SELECT SSN,Fname+' '+Lname 'FullName'
+FROM Employee
+WHERE Salary>1000
+
+SELECT SSN,Fname+' '+Lname 'FullName'
+FROM Employee
+WHERE Salary*12>10000
+
+SELECT Fname+' '+Lname 'FullName',Salary
+FROM Employee
+WHERE Sex ='f'
+
+SELECT Dnum,Dname
+FROM Departments
+WHERE MGRSSN = 968574
+
+SELECT Pnumber,Pname,Plocation
+FROM Project
+WHERE Dnum = 10
